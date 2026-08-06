@@ -32,7 +32,7 @@
 }
 
 .tab-conteiner {
-  padding-right: 24px; /* місце під хрестик, щоб текст не перекривався */
+  padding-right: 24px; 
 }
 
 .tab-conteiner:hover {
@@ -64,7 +64,6 @@
   object-fit: contain;
 }
 
-/* іконка першого табу (окремо, з тултипом) */
 .first-tab-wrapper {
   position: relative;
   align-self: center;
@@ -109,7 +108,6 @@
   flex-shrink: 0;
 }
 
-/* Кнопка "більше" (шеврон з випадаючим списком) */
 .tabs-more {
   align-self: center;
   position: relative;
