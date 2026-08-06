@@ -1,13 +1,7 @@
-
+import Tabs from "./Tabs";
 
 function App() {
-  
-
-  return (
-    <>
-      
-    </>
-  )
+  return <Tabs />;
 }
 
-export default App
+export default App;
