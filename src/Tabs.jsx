@@ -18,7 +18,7 @@ function Tabs() {
     ]
   }, [tabs])
 
-  const [visibleTabs, setVisibleTabs] = useState(sortedTabs)
+  const [visibleTabs, setVisibleTabs] = useState([])
   const [hiddenTabs, setHiddenTabs] = useState([])
 
   const containerRef = useRef(null)
@@ -134,25 +134,30 @@ function Tabs() {
         key={tab.id} 
         className="tab-item" 
         onMouseEnter={() => setHoveredTab(tab.id)}
-        onMouseLeave={() => setHoveredTab(null)}
       >
         <a href={tab.url}>
           <img src={tab.icon} alt={tab.title} className="tab-icon" />
           {tab.title}
         </a>
         <div
-          className='tab-wrapper'ґ
+          className='tab-wrapper'
         >
       {hoveredTab === tab.id && (
-        <div className='pinTag'>
+        <div className='pinTag' onMouseEnter={() => setHoveredTab(tab.id)} onMouseLeave={() => setHoveredTab(null)}>
           <button
             className="pin-button"
-            onClick={() => togglePin(tab.id)}
+            onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            togglePin(tab.id)
+            setHoveredTab(tab.id)
+          }}
           >
           <img
-            src={tab.pinned ? '/pinned.svg' : '/pin.svg'}
+            src={'/pin.svg'}
             alt="pin"
           />
+          <span>Tab {tab.pinned ? 'ab' : 'an'}pinnen</span>
         </button>
         </div>
       )}
