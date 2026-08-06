@@ -64,20 +64,6 @@
   object-fit: contain;
 }
 
-.tabs a .close-icon {
-  width: 14px;
-  height: 14px;
-  margin-left: 4px;
-  border-radius: 50%;
-  color: #9ca3af;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.tabs a .close-icon:hover {
-  background: #e5e7eb;
-  color: #ef4444;
-}
-
 /* іконка першого табу (окремо, з тултипом) */
 .first-tab-wrapper {
   position: relative;
@@ -284,27 +270,11 @@
   transform: translateY(-50%) scale(0.95);
 }
 
-.button-cross-inhidden {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #e53935;
-  color: #fff;
-  border: none;
-  font-size: 10px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  padding: 0;
-  z-index: 2;
-  transition: background-color 0.15s ease, transform 0.15s ease;
-}
-
-.button-cross-inhidden:hover {
-  background-color: #c62828;
-  transform: translateY(-50%) scale(1.1);
+.tab-item.drag-over .tab-conteiner {
+  background: #dbeafe;
+  outline: 2px dashed #2563eb;
+  outline-offset: -2px;
+  border-radius: 6px;
 }
 
 .tab-item.dragging .tab-conteiner {
