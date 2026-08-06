@@ -1,7 +1,9 @@
 import Tabs from "./Tabs";
 
 function App() {
-  return <Tabs />;
+  return (
+      <Tabs />
+  )
 }
 
 export default App;

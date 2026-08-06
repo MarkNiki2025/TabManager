@@ -31,7 +31,11 @@
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.tabs a:hover {
+.tab-conteiner {
+  padding-right: 24px; /* місце під хрестик, щоб текст не перекривався */
+}
+
+.tab-conteiner:hover {
   background: #f3f4f6;
   color: #1f2937;
 }
@@ -247,4 +251,71 @@
   width: 14px;
   height: 14px;
   flex-shrink: 0;
+}
+
+.button-cross {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  font-size: 10px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.button-cross:hover {
+  background-color: #c62828;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.button-cross:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.button-cross-inhidden {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  font-size: 10px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.button-cross-inhidden:hover {
+  background-color: #c62828;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.tab-item.dragging .tab-conteiner {
+  background-color: #4b5563;
+  border-radius: 6px;
+}
+
+.tab-item.dragging .tab-conteiner a {
+  color: #ffffff;
+}
+
+.tab-item.dragging .tab-icon {
+  opacity: 0.8;
 }
