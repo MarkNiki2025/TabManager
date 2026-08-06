@@ -260,9 +260,11 @@ function Tabs() {
         {isOpen && (
           <div className="tabs-dropdown">
             {hiddenTabs.map((tab) => (
-              <div key={tab.id} className="tabs-dropdown-item">
-                <img src={tab.icon} alt={tab.title} className="item-icon" />
-                {tab.title}
+              <div  key={tab.id} className="tabs-dropdown-item">
+                <a href={tab.url}>
+                  <img src={tab.icon} alt={tab.title} className="item-icon" />
+                  {tab.title}
+                </a>
               </div>
             ))}
           </div>
